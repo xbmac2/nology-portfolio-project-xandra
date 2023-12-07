@@ -124,6 +124,12 @@ section {
     justify-content: space-around;
     gap: 85px;
   }
+  &__card img {
+    @include media-query-mixins.small {
+      height: 50px;
+      width: 50px;
+    }
+  }
 }
 
 .contact {

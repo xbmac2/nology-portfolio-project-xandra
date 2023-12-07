@@ -107,6 +107,12 @@ section {
   justify-content: space-around;
   gap: 85px;
 }
+@media only screen and (max-width: 890px) {
+  .skills__card img {
+    height: 50px;
+    width: 50px;
+  }
+}
 
 .contact__gallery {
   display: flex;
