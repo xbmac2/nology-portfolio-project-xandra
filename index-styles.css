@@ -2,12 +2,22 @@
   margin: 0;
 }
 
+p {
+  font-family: "Nanum Gothic Coding", monospace;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   background-color: #f5f5f5;
   background-image: url("./pexels-evie-shaffer-2395249.jpg");
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .landing {
@@ -86,6 +96,10 @@ section {
 .about-me__description p {
   font-family: "Nanum Gothic Coding", monospace;
 }
+.about-me__photo img {
+  height: 250px;
+  width: 250px;
+}
 
 .skills__container {
   display: flex;
@@ -102,6 +116,12 @@ section {
   justify-content: space-around;
   gap: 85px;
 }
+@media only screen and (max-width: 890px) {
+  .skills__card img {
+    height: 50px;
+    width: 50px;
+  }
+}
 
 .contact__gallery {
   display: flex;
@@ -113,6 +133,12 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media only screen and (max-width: 890px) {
+  .contact__card img {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 span {
