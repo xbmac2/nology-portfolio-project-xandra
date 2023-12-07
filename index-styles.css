@@ -91,6 +91,10 @@ section {
 .about-me__description p {
   font-family: "Nanum Gothic Coding", monospace;
 }
+.about-me__photo img {
+  height: 250px;
+  width: 250px;
+}
 
 .skills__container {
   display: flex;
