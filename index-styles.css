@@ -2,6 +2,11 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   background-color: #f5f5f5;
   background-image: url("./pexels-evie-shaffer-2395249.jpg");
@@ -24,7 +29,6 @@ body {
   border-radius: 8px;
   height: 85%;
   width: 85%;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -50,12 +54,15 @@ body {
   font-family: "Nanum Gothic Coding", monospace;
 }
 
+h2 {
+  font-family: DotGothic16, sans-serif;
+}
+
 .container {
   background-color: rgba(245, 245, 245, 0.5843137255);
   border-radius: 8px;
   height: 85%;
   width: 85%;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -68,7 +75,6 @@ body {
 }
 
 section {
-  /* border: 1px solid purple; */
   width: 100vw;
   margin: 7.5vh 0vw;
 }
@@ -78,18 +84,16 @@ section {
   flex-direction: column;
   align-items: center;
 }
-
 .about-me__container > * {
   padding: 5%;
   text-align: center;
 }
-
-h2 {
-  font-family: DotGothic16, sans-serif;
-}
-
 .about-me__description p {
   font-family: "Nanum Gothic Coding", monospace;
+}
+.about-me__photo img {
+  height: 250px;
+  width: 250px;
 }
 
 .skills__container {
@@ -98,16 +102,20 @@ h2 {
   align-items: center;
   justify-content: space-around;
 }
-
 .skills__container > * {
   padding: 5%;
 }
-
 .skills__gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 85px;
+}
+@media only screen and (max-width: 890px) {
+  .skills__card img {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .contact__gallery {
@@ -116,34 +124,64 @@ h2 {
   width: 85vw;
   padding: 5%;
 }
-
 .contact__card {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media only screen and (max-width: 890px) {
+  .contact__card img {
+    height: 50px;
+    width: 50px;
+  }
+}
 
-.projects-container {
+span {
+  padding: 5%;
+}
+@media only screen and (min-width: 891px) {
+  span {
+    height: 50%;
+  }
+}
+
+@media only screen and (min-width: 891px) {
+  h3 {
+    padding: 5%;
+  }
+}
+
+.projects__container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .projects__headline {
   padding: 5%;
 }
-
-.projects-gallery h3 ~ * {
+.projects__gallery h3 ~ * {
   padding-bottom: 5%;
 }
-
-.projects-card > * {
+.projects__card {
+  padding: 5%;
+}
+@media only screen and (min-width: 891px) {
+  .projects__card {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 891px) {
+  .projects__picture {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 891px) {
+  .projects__gallery img {
+    padding: 5%;
+  }
+}
+.projects__card > * {
   text-align: center;
   font-family: "Nanum Gothic Coding", monospace;
-}
-
-.projects__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
