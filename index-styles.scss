@@ -4,18 +4,9 @@
   margin: 0;
 }
 
-p {
-  font-family: 'Nanum Gothic Coding', monospace;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
 body {
   background-color: #f5f5f5;
-  background-image: url("./pexels-evie-shaffer-2395249.jpg");
+  background-image: url("background-flowers.jpg");
   background-attachment: fixed;
 
   display: flex;
@@ -23,66 +14,9 @@ body {
   align-items: center;
 }
 
-
-.landing {
-  height: 100vh;
+section {
   width: 100vw;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin: 0;
-}
-
-.landing__container {
-  background-color: #f5f5f595;
-  border-radius: 8px;
-  height: 85%;
-  width: 85%;
-
-  // border: 1px solid black;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.landing__container > * {
-  padding: 5%;
-  text-align: right;
-}
-
-.landing h1 {
-  font-family: 'Nanum Gothic Coding', monospace;
-}
-
-.landing p {
-  font-size: x-large;
-  font-family: DotGothic16, sans-serif;
-}
-
-.landing li {
-  list-style-type: none;
-  font-size: large;
-  font-family: 'Nanum Gothic Coding', monospace;
-}
-
-h2 {
-  font-family: DotGothic16, sans-serif;
-}
-
-.container {
-  background-color: #f5f5f595;
-  border-radius: 8px;
-  height: 85%;
-  width: 85%;
-
-  // border: 1px solid black;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  margin: 7.5vh 0vw;
 }
 
 .long {
@@ -91,11 +25,48 @@ h2 {
   align-items: center;
 }
 
-section {
-  // border: 1px solid purple;
+.container {
+  background-color: #f5f5f595;
+  border-radius: 8px;
+  height: 85%;
+  width: 85%;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.landing {
+  height: 100vh;
   width: 100vw;
-  margin: 7.5vh 0vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+ 
+  &__container {
+    background-color: #f5f5f595;
+    border-radius: 8px;
+    height: 85%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__container > * {
+    padding: 5%;
+    text-align: right;
+  }
+
+  p {
+    font-size: x-large;
+    font-family: DotGothic16, sans-serif;
+  }
+  li {
+    list-style-type: none;
+    font-size: large;
+    font-family: 'Nanum Gothic Coding', monospace;
+  }
 }
 
 .about-me {
@@ -142,6 +113,54 @@ section {
   }
 }
 
+.projects {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__headline {
+    padding: 5%;
+  }
+
+  &__gallery h3 ~ * {
+    padding-bottom: 5%;
+  }
+
+  &__card {
+    padding: 5%;
+    @include media-query-mixins.large {
+      display: flex;
+      flex-direction: row;
+    }  
+  }
+  &__card > * {
+    text-align: center;
+    font-family: 'Nanum Gothic Coding', monospace;
+  }
+
+  &__plaque {
+    padding: 5%;
+  
+    @include media-query-mixins.large {
+      height: 50%;
+     }
+  }
+
+  &__picture {
+    @include media-query-mixins.large {
+      width: 50%;
+    } 
+  }
+
+  &__gallery img {
+    @include media-query-mixins.large {
+      padding: 5%;
+    } 
+  }
+}
+
 .contact {
   &__gallery {
     display: flex;
@@ -164,13 +183,13 @@ section {
   }
 }
 
-span {
-  padding: 5%;
-  
-  @include media-query-mixins.large {
-    height: 50%;
-    // border: 1px solid orange;
-  }
+
+h1 {
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
+h2 {
+  font-family: DotGothic16, sans-serif;
 }
 
 h3 {
@@ -179,58 +198,11 @@ h3 {
   }
 }
 
-.projects {
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    
-  }
-
-  &__headline {
-    padding: 5%;
-  }
-
-
-  &__gallery h3 ~ * {
-    padding-bottom: 5%;
-  }
-
-  &__card {
-    padding: 5%;
-    @include media-query-mixins.large {
-      display: flex;
-      flex-direction: row;
-    }  
-  }
-
-  &__picture {
-    @include media-query-mixins.large {
-      width: 50%;
-      // border: 1px solid green;
-    } 
-  }
-
-  &__gallery img {
-    @include media-query-mixins.large {
-      padding: 5%;
-    } 
-    }
-
-  &__card > * {
-    text-align: center;
-    font-family: 'Nanum Gothic Coding', monospace;
-  }
-
-
+p {
+  font-family: 'Nanum Gothic Coding', monospace;
 }
 
-// .projects__card {
-//    // &__card {
-//   //   display: flex;
-//   //   flex-direction: column;
-//   //   align-items: center;
-//   // }
-// } DOESNOT DO ANYTHING?
-
+a {
+  text-decoration: none;
+  color: black;
+}
