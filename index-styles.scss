@@ -1,0 +1,208 @@
+@use "./partials/media-query-mixins";
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  background-image: url("background-flowers.jpg");
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 100vw;
+  margin: 7.5vh 0vw;
+}
+
+.long {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #f5f5f595;
+  border-radius: 8px;
+  height: 85%;
+  width: 85%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+ 
+  &__container {
+    background-color: #f5f5f595;
+    border-radius: 8px;
+    height: 85%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__container > * {
+    padding: 5%;
+    text-align: right;
+  }
+
+  p {
+    font-size: x-large;
+    font-family: DotGothic16, sans-serif;
+  }
+  li {
+    list-style-type: none;
+    font-size: large;
+    font-family: 'Nanum Gothic Coding', monospace;
+  }
+}
+
+.about-me {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+  &__container > * {
+    padding: 5%;
+    text-align: center;
+  }
+  &__description p{
+    font-family: 'Nanum Gothic Coding', monospace;;
+  }
+
+  &__photo img {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+.skills {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__container > * {
+    padding: 5%;
+  }
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 85px;
+  }
+  &__card img {
+    @include media-query-mixins.small {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+.projects {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__headline {
+    padding: 5%;
+  }
+
+  &__gallery h3 ~ * {
+    padding-bottom: 5%;
+  }
+
+  &__card {
+    padding: 5%;
+    @include media-query-mixins.large {
+      display: flex;
+      flex-direction: row;
+    }  
+  }
+  &__card > * {
+    text-align: center;
+    font-family: 'Nanum Gothic Coding', monospace;
+  }
+
+  &__plaque {
+    padding: 5%;
+  
+    @include media-query-mixins.large {
+      height: 50%;
+     }
+  }
+
+  &__picture {
+    @include media-query-mixins.large {
+      width: 50%;
+    } 
+  }
+
+  &__gallery img {
+    @include media-query-mixins.large {
+      padding: 5%;
+    } 
+  }
+}
+
+.contact {
+  &__gallery {
+    display: flex;
+    justify-content: space-around;
+    width: 85vw;
+    padding: 5%;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__card img {
+    @include media-query-mixins.small {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+
+h1 {
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
+h2 {
+  font-family: DotGothic16, sans-serif;
+}
+
+h3 {
+  @include media-query-mixins.large {
+    padding: 5%;
+  }
+}
+
+p {
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
