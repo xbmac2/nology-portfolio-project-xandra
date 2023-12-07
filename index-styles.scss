@@ -161,6 +161,7 @@ section {
 
 span {
   padding: 5%;
+  
   @include media-query-mixins.large {
     height: 50%;
     // border: 1px solid orange;
