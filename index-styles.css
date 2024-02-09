@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  background-image: url("./img/background-flowers.jpg");
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 100vw;
+  margin: 7.5vh 0vw;
+}
+
+.long {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(245, 245, 245, 0.7764705882);
+  border-radius: 3px;
+  height: 85%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.landing__container {
+  background-color: rgba(245, 245, 245, 0.7764705882);
+  border-radius: 3px;
+  height: 85%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.landing__container > * {
+  padding: 5%;
+  text-align: right;
+}
+.landing p {
+  font-size: x-large;
+  font-family: DotGothic16, sans-serif;
+}
+.landing li {
+  list-style-type: none;
+  font-size: large;
+  font-family: "Nanum Gothic Coding", monospace;
+  margin-bottom: 1rem;
+}
+
+.about-me__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-me__container > * {
+  padding: 5%;
+  text-align: center;
+}
+.about-me__description p {
+  font-family: "Nanum Gothic Coding", monospace;
+}
+.about-me__photo img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+
+.skills__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.skills__container > * {
+  padding: 5%;
+}
+.skills__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 85px;
+}
+@media only screen and (max-width: 890px) {
+  .skills__card img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects__headline {
+  padding: 5%;
+}
+.projects__gallery h3 ~ * {
+  padding-bottom: 5%;
+}
+.projects__card {
+  padding: 5%;
+}
+@media only screen and (min-width: 891px) {
+  .projects__card {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.projects__card > * {
+  text-align: center;
+  font-family: "Nanum Gothic Coding", monospace;
+}
+.projects__plaque {
+  padding: 5%;
+  width: 60%;
+}
+@media only screen and (min-width: 891px) {
+  .projects__plaque {
+    height: 50%;
+  }
+}
+@media only screen and (min-width: 891px) {
+  .projects__picture {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 891px) {
+  .projects__gallery img {
+    padding: 5%;
+  }
+}
+
+.contact__gallery {
+  display: flex;
+  justify-content: space-around;
+  width: 85vw;
+  padding: 5%;
+}
+@media only screen and (max-width: 890px) {
+  .contact__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+.contact__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 890px) {
+  .contact__card img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+h1 {
+  font-family: "Nanum Gothic Coding", monospace;
+}
+
+h2 {
+  font-family: DotGothic16, sans-serif;
+}
+
+@media only screen and (min-width: 891px) {
+  h3 {
+    padding: 5%;
+  }
+}
+
+p, small {
+  font-family: "Nanum Gothic Coding", monospace;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
